@@ -59,7 +59,7 @@ export class MdInput {
   }
 
   mdValueChanged() {
-    this.updateService.update();
+    // this.updateService.update();
     if (this.mdTextArea) {
       $(this.input).trigger('autoresize');
     }
