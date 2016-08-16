@@ -28,9 +28,9 @@ export class MaterializeFormValidationRenderer {
 
           let label:any = target.querySelector('label');
           if (label) {
-            label.classList.remove('valid');
             label.classList.add('active');
-            label.classList.add('invalid');
+            // label.classList.remove('valid');
+            // label.classList.add('invalid');
 
             // get error message from label
             let msg = label.getAttribute('data-error');
@@ -67,11 +67,11 @@ export class MaterializeFormValidationRenderer {
           input.classList.remove('invalid');
           input.classList.add('valid');
 
-          let label:any = target.querySelector('label');
-          if (label) {
-            label.classList.remove('invalid');
-            label.classList.add('valid');
-          }
+          // let label:any = target.querySelector('label');
+          // if (label) {
+          //   label.classList.remove('invalid');
+          //   label.classList.add('valid');
+          // }
         }
         break;
       }
