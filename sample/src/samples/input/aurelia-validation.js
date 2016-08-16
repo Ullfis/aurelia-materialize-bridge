@@ -10,7 +10,7 @@ export class AureliaValidation {
 
   rules = ValidationRules
     .ensure('firstName').required()
-    .ensure('lastName').required();
+    .ensure('lastName').length({ minimum: 4 }).required();
 
   constructor(controller: ValidationController) {
     this.controller = controller;
