@@ -63,8 +63,7 @@ export class MdInput {
   }
 
   mdValueChanged() {
-    let input = this.element.querySelector('input') || this.element.querySelector('textarea');
-    if (input && !$(input).is(':focus')) {
+    if (!$(this.input).is(':focus')) {
       this.updateService.update();
     }
     if (this.mdTextArea) {
