@@ -34,7 +34,9 @@ export class MdWaves {
     }
 
     this.attributeManager.addClasses(classes);
-    Waves.attach(this.element);
+    if (!(typeof require === "function" && typeof require.specified === "function" && require.specified('waves'))) {
+      Waves.attach(this.element);
+    }
   }
 
   detached() {
